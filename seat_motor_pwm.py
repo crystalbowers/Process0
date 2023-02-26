@@ -1,4 +1,4 @@
-import RPi.GPIO as GPIO
+import Jetson.GPIO as GPIO
 import time
 
 # Set the GPIO pin for PWM output
