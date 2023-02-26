@@ -6,5 +6,6 @@ dependencies:
   - pip:
       - adafruit-circuitpython-drv2605
       - Jetson.GPIO
+      - adafruit-blinka
   - requests
 
