@@ -3,5 +3,7 @@ channels:
   - defaults
 dependencies:
   - python=3.8
-  - pip
+  - pip:
+      - adafruit-circuitpython-drv2605
   - requests
+
