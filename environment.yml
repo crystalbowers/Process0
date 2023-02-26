@@ -7,5 +7,6 @@ dependencies:
       - adafruit-circuitpython-drv2605
       - Jetson.GPIO
       - adafruit-blinka
+      - RPi.GPIO
   - requests
 
