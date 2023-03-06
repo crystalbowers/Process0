@@ -4,8 +4,6 @@ channels:
 dependencies:
   - python=3.8
   - pip:
-      - adafruit-circuitpython-drv2605
       - Jetson.GPIO
-      - adafruit-blinka
   - requests
 
