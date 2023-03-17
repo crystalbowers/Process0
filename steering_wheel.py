@@ -2,6 +2,7 @@ import board
 import busio
 import adafruit_drv2605
 import time
+import smbus
 
 i2c = busio.I2C(board.SCL, board.SDA)
 drv = adafruit_drv2605.DRV2605(i2c)
@@ -15,6 +16,7 @@ drv = adafruit_drv2605.DRV2605(i2c)
 #print("Those two effects with pauses")
 def steering_wheel_vibrate():
     time.sleep(1)
+    bus = smbus.SMBus(1)
     start = time.time()
     while time.time() < start + 5:
         effect_num = 118
