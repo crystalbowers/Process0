@@ -7,9 +7,10 @@ i2c = busio.I2C(board.SCL, board.SDA)
 drv = adafruit_drv2605.DRV2605(i2c)
 
 effect_num=118
+time.sleep(1)  # for 0.5 seconds
 drv.sequence[0] = adafruit_drv2605.Effect(effect_num)
 drv.sequence[1] = adafruit_drv2605.Pause(0.5)
-#time.sleep(0.5)  # for 0.5 seconds
+
 
 #drv.sequence[2] = adafruit_drv2605.Effect(effect_num)
 #drv.sequence[3] = adafruit_drv2605.Effect(0)
