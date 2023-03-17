@@ -14,9 +14,9 @@ class Steering_Wheel_MotorController:
 
     def run(self,run_time=5):
         # Run vibrations
-        drv.sequence[0] = adafruit_drv2605.Effect(self.effect_num)
+        self.drv.sequence[0] = adafruit_drv2605.Effect(self.effect_num)
 
         # Run for five seconds then stop
-        drv.play()
+        self.drv.play()
         time.sleep(run_time)
-        drv.stop()
+        self.drv.stop()
