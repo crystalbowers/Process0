@@ -1,18 +1,19 @@
 import board
 import busio
 import adafruit_drv2605
-#import time
 
 i2c = busio.I2C(board.SCL, board.SDA)
 drv = adafruit_drv2605.DRV2605(i2c)
 
 effect_num=118
+print("sequence 0 about to start")
 drv.sequence[0] = adafruit_drv2605.Effect(effect_num)
 drv.sequence[1] = adafruit_drv2605.Pause(0.5)
 drv.sequence[2] = adafruit_drv2605.Effect(effect_num)
 drv.sequence[3] = adafruit_drv2605.Effect(0)
 drv.play()
 print("Those two effects with pauses")
+
 #def steering_wheel_vibrate():
  #   time.sleep(1)
   #  start = time.time()
