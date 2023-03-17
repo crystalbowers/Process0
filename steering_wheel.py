@@ -22,7 +22,7 @@ def steering_wheel_vibrate():
         drv.play()  # play the effect
         #time.sleep(0.5)  # for 0.5 seconds
         print("Running steering wheel vibration")
-
+steering_wheel_vibrate()
 #drv.stop()
 # We like 83. 106 is better, slightly stronger than 82
 # 70 is wierd
