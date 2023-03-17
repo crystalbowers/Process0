@@ -4,15 +4,12 @@ import adafruit_drv2605
 
 i2c = busio.I2C(board.SCL, board.SDA)
 drv = adafruit_drv2605.DRV2605(i2c)
+print("I'm done setting up")
 
 effect_num = 118
-print("sequence 0 starting")
 drv.sequence[0] = adafruit_drv2605.Effect(effect_num)
-print("sequence 1 starting")
-drv.sequence[1] = adafruit_drv2605.Pause(0.5)
-print("sequence 2 starting")
+drv.sequence[1] = adafruit_drv2605.Pause(1)
 drv.sequence[2] = adafruit_drv2605.Effect(effect_num)
-print("sequence 3 starting")
 drv.sequence[3] = adafruit_drv2605.Effect(0)
 drv.play()
 
