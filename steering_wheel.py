@@ -13,7 +13,7 @@ drv.sequence[1] = adafruit_drv2605.Pause(0.5)
 
 #drv.sequence[2] = adafruit_drv2605.Effect(effect_num)
 #drv.sequence[3] = adafruit_drv2605.Effect(0)
-#drv.play()
+drv.play()
 print("Those two effects with pauses")
 
 #def steering_wheel_vibrate():
