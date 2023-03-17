@@ -1,8 +1,9 @@
 import board
 import busio
 import adafruit_drv2605
+import time
 
-# Connect to I2C
+# Initalize I2C bus and DRV2065 module
 i2c = busio.I2C(board.SCL, board.SDA)
 drv = adafruit_drv2605.DRV2605(i2c)
 
@@ -13,6 +14,8 @@ drv.sequence[0] = adafruit_drv2605.Effect(effect_num)
 #drv.sequence[2] = adafruit_drv2605.Effect(effect_num)
 #drv.sequence[3] = adafruit_drv2605.Effect(0)
 drv.play()
+time.sleep(0.5)
+drv.stop()
 
 print("Those two effects with pauses")
 
