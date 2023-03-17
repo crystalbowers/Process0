@@ -16,7 +16,7 @@ drv = adafruit_drv2605.DRV2605(i2c)
 def steering_wheel_vibrate():
     start = time.time()
     while time.time() < start + 5:
-        effect_num = 118
+        effect_num = 87
         drv.sequence[0] = adafruit_drv2605.Effect(effect_num)
         #drv.sequence[1] = adafruit_drv2605.Pause(0.5)
         drv.play()  # play the effect
