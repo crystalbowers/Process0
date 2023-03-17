@@ -20,3 +20,7 @@ class Steering_Wheel_MotorController:
         self.drv.play()
         time.sleep(run_time)
         self.drv.stop()
+
+    if __name__ == "__main__":
+        # test if it works
+        run()
