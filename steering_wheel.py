@@ -14,7 +14,7 @@ drv.sequence[0] = adafruit_drv2605.Effect(effect_num)
 #drv.sequence[2] = adafruit_drv2605.Effect(effect_num)
 #drv.sequence[3] = adafruit_drv2605.Effect(0)
 drv.play()
-time.sleep(0.5)
+time.sleep(5)
 drv.stop()
 
 print("Those two effects with pauses")
