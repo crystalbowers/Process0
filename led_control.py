@@ -14,10 +14,12 @@ class LED_Controller:
     def run_left_side(self):
         GPIO.output(self.left_led, GPIO.HIGH)
         time.sleep(3)
+        GPIO.output(self.left_led, GPIO.LOW)
 
     def run_right_side(self):
         GPIO.output(self.right_led, GPIO.HIGH)
         time.sleep(3)
+        GPIO.output(self.right_led, GPIO.LOW)
 
     def run(self, side="both"):
         self.run_left_side()
@@ -25,6 +27,6 @@ class LED_Controller:
 
     def clean_up(self):
         # Cleanup GPIO pins
-        self.left_led.stop()
-        self.right_led.stop()
+        #self.left_led.stop()
+        #self.right_led.stop()
         GPIO.cleanup()
