@@ -1,16 +1,19 @@
-I created a new python3.7 virtual environment in the motorcode directory. The name of the folder that the virtual environment lives in is called 'env'.
+I created a new python3.7 virtual environment on the Jetson Nano in the motorcode directory. The name of the folder that the virtual environment lives in is called 'env'.
 
 This environment allows you to run Python 3.7 and install packages without affecting the main Python 3.6 installation on your system, while keeping any package or Python-related problems within the environment.
 
-I already created an environment, but to recreate on in case any problems occur:
+**I already created an environment, but to recreate on in case any problems occur:**
 
 cd ~/Documents/mechanical/motorcode
+
 sudo rm -r env
+
 python3.7 -m venv env
 
-To activate the virtual environment:
+**To activate the virtual environment:**
 
 cd ~/Documents/mechanical/motorcode
+
 source env/bin/activate
 
 You will see '(env)' before your path and username in the terminal, which indicates that the virtual environment is active. Now you can run your files as usual. This is using the python and pip (3.7) in the virtual env, not the base system ones (3.6):
@@ -18,7 +21,7 @@ You will see '(env)' before your path and username in the terminal, which indica
 python test.py
 pip install requests
 
-To deactivate the virtual environment, simply type:
+**To deactivate the virtual environment, simply type:**
 
 deactivate
 
