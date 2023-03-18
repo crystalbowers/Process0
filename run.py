@@ -1,7 +1,7 @@
 # NOTE: RIGHT NOW SEAT MOTOR CONTROL AND STEERING WHEEL CLASSES EACH TRY TO SET UP GPIO BOARD. Comment out the one you dont want if running both.
 #from seat_motor_control import Seat_MotorController
-#from steering_wheel_motor_control import Steering_Wheel_MotorController
-from led_control import LED_Controller
+from steering_wheel_motor_control import Steering_Wheel_MotorController
+#from led_control import LED_Controller
 # Running seat cushion
 #seat_mc = Seat_MotorController()
 #seat_mc.run(side="left", delay_secs=10)
