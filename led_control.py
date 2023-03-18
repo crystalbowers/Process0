@@ -1,4 +1,4 @@
-import Jetson.GPIO
+import Jetson.GPIO as GPIO
 import time
 
 class LED_Controller:
