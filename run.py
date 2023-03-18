@@ -10,7 +10,9 @@ from led_control import LED_Controller
 # Running Steering Wheel Motors
 steering_wheel_mc = Steering_Wheel_MotorController(effect_num=118)
 steering_wheel_mc.run()
+print("I ran")
 
+# Running LED lights
 steering_wheel_lc = LED_Controller()
 steering_wheel_lc.run(side="right")
 steering_wheel_lc.run(side="left")
