@@ -8,7 +8,7 @@ class LED_Controller:
         self.right_led = right_led
 
         # Set up the board
-        GPIO.setmode(GPIO.BOARD)
+        #GPIO.setmode(GPIO.BOARD)
 
         # Set up the pins
         GPIO.setup(self.left_led, GPIO.OUT)
