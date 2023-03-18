@@ -36,6 +36,9 @@ class LED_Controller:
 
     def clean_up(self):
         # Cleanup GPIO pins
-        #self.left_led.stop()
-        #self.right_led.stop()
         GPIO.cleanup()
+
+    if __name__ == "__main__":
+        # test if it works
+        run()
+        clean_up()
