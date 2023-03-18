@@ -4,22 +4,21 @@ import time
 class LED_Controller:
     # Initialize the class and pick your pins for each LED
     def __init__(self, left_led=7, right_led=21):
-        #self.left_led = left_led
-        #self.right_led = right_led
-        print("done")
+        self.left_led = left_led
+        self.right_led = right_led
+
+        # Set up the board
         GPIO.setmode(GPIO.BOARD)
-        GPIO.setup(left_led, GPIO.OUT)
-        GPIO.setup(right_led, GPIO.OUT)
+
+        # Set up the pins
+        GPIO.setup(self.left_led, GPIO.OUT)
+        GPIO.setup(self.right_led, GPIO.OUT)
 
 
     def run_left_side(self):
-        left_led=7
-        GPIO.output(left_led, GPIO.HIGH)
+        GPIO.output(self.left_led, GPIO.HIGH)
         time.sleep(3)
-        GPIO.output(left_led, GPIO.LOW)
-        #GPIO.output(self.left_led, GPIO.HIGH)
-        #time.sleep(3)
-        #GPIO.output(self.left_led, GPIO.LOW)
+        GPIO.output(self.left_led, GPIO.LOW)
 
     def run_right_side(self):
         GPIO.output(self.right_led, GPIO.HIGH)
