@@ -4,9 +4,9 @@ import Jetson.GPIO as GPIO
 import time
 
 # for 1st Motor on ENA
-ENA = 33
-IN1 = 35
-IN2 = 37
+ENA = 32
+IN1 = 36
+IN2 = 38
 
 # set pin numbers to the board's
 GPIO.setmode(GPIO.BOARD)
