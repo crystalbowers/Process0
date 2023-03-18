@@ -6,10 +6,13 @@ class LED_Controller:
     def __init__(self, left_led=7, right_led=21):
         self.left_led = left_led
         self.right_led = right_led
+        print("done")
 
         GPIO.setmode(GPIO.BOARD)
+        print("eek")
         GPIO.setup(self.left_led, GPIO.OUT)
         GPIO.setup(self.right_led, GPIO.OUT)
+        print("ahh")
 
     def run_left_side(self):
         GPIO.output(self.left_led, GPIO.HIGH)
