@@ -12,3 +12,4 @@ from led_control import LED_Controller
 
 steering_wheel_lc = LED_Controller()
 steering_wheel_lc.run(side="both")
+steering_wheel_lc.clean_up()
