@@ -11,8 +11,6 @@ class LED_Controller:
         GPIO.setup(self.left_led, GPIO.OUT)
         GPIO.setup(self.right_led, GPIO.OUT)
 
-
-
     def run_left_side(self):
         GPIO.output(self.left_led, GPIO.HIGH)
         time.sleep(3)
