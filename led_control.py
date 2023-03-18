@@ -22,6 +22,7 @@ class LED_Controller:
     def run(self, side="both"):
         self.run_left_side()
         self.run_right_side()
+
     def clean_up(self):
         # Cleanup GPIO pins
         self.left_led.stop()
