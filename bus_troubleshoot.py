@@ -4,7 +4,7 @@ import board
 i2c = busio.I2C(board.SCL, board.SDA)
 print("I2C devices found:", [hex(i) for i in i2c.scan()])
 
-address = 0x5a
+address = 0x5A
 
 if not address in i2c.scan():
     print("Could not find address")
