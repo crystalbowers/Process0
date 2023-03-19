@@ -1,3 +1,5 @@
+# From https://forums.developer.nvidia.com/t/displaying-to-the-screen-with-opencv-and-gstreamer/140648/8
+
 import sys
 import cv2
 
