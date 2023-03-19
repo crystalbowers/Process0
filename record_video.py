@@ -25,7 +25,7 @@ def read_cam():
             out.write(img);
             cv2.waitKey(1)
     else:
-     print "pipeline open failed"
+     print("pipeline open failed")
 
     print("successfully exit")
     cap.release()
