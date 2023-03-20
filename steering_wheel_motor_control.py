@@ -20,9 +20,10 @@ class Steering_Wheel_MotorController:
         time.sleep(run_time)
         self.drv.stop()
 
+
 if __name__ == "__main__":
     s = Steering_Wheel_MotorController()
     # test if it works
-    s.run()
+    s.run(run_time=0)
     time.sleep(5)
     s.run()
