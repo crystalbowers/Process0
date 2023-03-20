@@ -6,7 +6,8 @@ i2c = busio.I2C(board.SCL, board.SDA)
 drv = adafruit_drv2605.DRV2605(i2c)
 effect_num=118
 run_time=5
-drv.mode = adafruit_drv2605.MODE_REALTIME
+print("mode is",drv.mode)
+
 # Run vibrations
 drv.sequence[0] = adafruit_drv2605.Effect(effect_num)
 
@@ -35,7 +36,7 @@ time.sleep(3)
 drv.realtime_value = 0
 print("drv real time value:",drv.realtime_value)
 drv.mode = adafruit_drv2605.MODE_INTTRIG
-#print("mode is",drv.mode)
+print("mode is",drv.mode)
 
 
 
