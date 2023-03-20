@@ -11,7 +11,7 @@ class Steering_Wheel_MotorController:
         # Set effect number
         self.effect_num = effect_num
 
-    def run(self,effect_num=118):
+    def run(self,run_time=5):
         # Run vibrations
         self.drv.sequence[0] = adafruit_drv2605.Effect(self.effect_num)
 
