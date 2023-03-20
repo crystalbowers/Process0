@@ -7,12 +7,13 @@ drv = adafruit_drv2605.DRV2605(i2c)
 effect_num=118
 effect_num=118
 # Run vibrations
-self.drv.sequence[0] = adafruit_drv2605.Effect(self.effect_num)
+drv.sequence[0] = adafruit_drv2605.Effect(effect_num)
 
 # Run for five seconds then stop
-self.drv.play()
+drv.play()
 time.sleep(run_time)
-self.drv.stop()
+drv.stop()
+drv.stop()
 
 # Start real-time playback
 drv.realtime_value = 0
