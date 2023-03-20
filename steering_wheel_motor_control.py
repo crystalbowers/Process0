@@ -28,6 +28,5 @@ class Steering_Wheel_MotorController:
 if __name__ == "__main__":
     s = Steering_Wheel_MotorController()
     # test if it works
-    s.run(run_time=2)
-    time.sleep(2)
+    s.run(run_time=5)
     s.run()
