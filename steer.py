@@ -3,7 +3,7 @@ import busio
 import adafruit_drv2605
 import time
 i2c = busio.I2C(board.SCL, board.SDA)
-drv = adafruit_drv2605.DRV2605(self.i2c)
+drv = adafruit_drv2605.DRV2605(i2c)
 # Start real-time playback
 drv.realtime_value = 0
 drv.mode = adafruit_drv2605.MODE_REALTIME
