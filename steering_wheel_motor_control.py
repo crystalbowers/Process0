@@ -24,5 +24,5 @@ if __name__ == "__main__":
     s = Steering_Wheel_MotorController()
     # test if it works
     s.run()
-    time.sleep(0.5)
+    time.sleep(2)
     s.run()
