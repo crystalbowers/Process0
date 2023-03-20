@@ -16,6 +16,7 @@ class Steering_Wheel_MotorController:
         self.drv.sequence[0] = adafruit_drv2605.Effect(self.effect_num)
 
         # Need to do this or else there's a 10 sec delay on motor every time
+        # 10 sec delay will only occur once during initialization
         self.run(run_time=0)
 
     def run(self,run_time=5):
