@@ -16,7 +16,7 @@ print("I ran with new code")
 
 # Stop real-time playback
 drv.realtime_value = 120
-drv.mode = adafruit_drv2605.MODE_INTTRIG
+#drv.mode = adafruit_drv2605.MODE_INTTRIG
 
 
 '''effect_num = 118
