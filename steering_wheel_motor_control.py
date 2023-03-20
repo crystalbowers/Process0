@@ -10,6 +10,8 @@ class Steering_Wheel_MotorController:
         self.drv = adafruit_drv2605.DRV2605(self.i2c)
         # Set effect number
         self.effect_num = effect_num
+        # Need to do this or else there's a 10 sec delay on motor every time
+        self.run(run_time=0)
 
     def run(self,run_time=5):
         # Run vibrations
@@ -25,5 +27,4 @@ if __name__ == "__main__":
     s = Steering_Wheel_MotorController()
     # test if it works
     s.run(run_time=0)
-    time.sleep(0)
     s.run()
