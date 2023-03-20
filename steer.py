@@ -5,14 +5,13 @@ import time
 i2c = busio.I2C(board.SCL, board.SDA)
 drv = adafruit_drv2605.DRV2605(i2c)
 effect_num=118
-effect_num=118
+run_time=5
 # Run vibrations
 drv.sequence[0] = adafruit_drv2605.Effect(effect_num)
 
 # Run for five seconds then stop
 drv.play()
 time.sleep(run_time)
-drv.stop()
 drv.stop()
 
 # Start real-time playback
@@ -39,3 +38,9 @@ print("drv real time value:",drv.realtime_value)
 
 
 
+drv.sequence[0] = adafruit_drv2605.Effect(effect_num)
+
+# Run for five seconds then stop
+drv.play()
+time.sleep(run_time)
+drv.stop()
