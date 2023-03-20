@@ -4,13 +4,8 @@ import adafruit_drv2605
 import time
 i2c = busio.I2C(board.SCL, board.SDA)
 drv = adafruit_drv2605.DRV2605(i2c)
-drv.realtime_value = 0
-
 drv.mode = adafruit_drv2605.MODE_REALTIME
 print("set mode")
-# Buzz the motor briefly at 50% and 100% amplitude
-drv.realtime_value = 100
-print("ran 2")
 
 # Buzz the motor briefly at 50% and 100% amplitude
 drv.realtime_value = 50
