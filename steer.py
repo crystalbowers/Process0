@@ -9,6 +9,9 @@ run_time = 5
 # Buzz the motor briefly at 50% and 100% amplitude
 drv.realtime_value = 64
 time.sleep(0.5)
+drv.realtime_value = 127
+time.sleep(0.5)
+print("I ran with new code")
 # Run vibrations
 drv.sequence[0] = adafruit_drv2605.Effect(effect_num)
 
@@ -17,10 +20,8 @@ drv.play()
 time.sleep(run_time)
 drv.stop()
 
-drv.realtime_value = 127
-time.sleep(0.5)
-print("I ran with new code")
+
 
 # Stop real-time playback
-drv.realtime_value = 0
-drv.mode = adafruit_drv2605.MODE_INTTRIG
+#drv.realtime_value = 0
+#drv.mode = adafruit_drv2605.MODE_INTTRIG
