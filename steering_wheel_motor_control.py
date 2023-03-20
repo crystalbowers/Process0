@@ -17,7 +17,7 @@ class Steering_Wheel_MotorController:
 
         # Need to do this or else there's a 10 sec delay on motor every time
         # 10 sec delay will only occur once during initialization and not when it runs after that
-        self.run(run_time=0)
+        self.run(run_time=0.5)
 
     def run(self,run_time=5):
         # Run for five seconds then stop
