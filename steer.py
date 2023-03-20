@@ -16,3 +16,4 @@ time.sleep(0.5)
 
 # Stop real-time playback
 drv.realtime_value = 0
+drv.mode = adafruit_drv2605.MODE_INTTRIG
