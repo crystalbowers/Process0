@@ -1,4 +1,4 @@
 Jetson.GPIO==2.0.21
 Adafruit-Blinka
 adafruit-circuitpython-drv2605
-opencv-python==4.7.0.72
+opencv-python
