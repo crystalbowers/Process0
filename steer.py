@@ -8,15 +8,15 @@ drv.mode = adafruit_drv2605.MODE_REALTIME
 print("set mode")
 
 # Buzz the motor briefly at 50% and 100% amplitude
-drv.realtime_value = 50
+drv.realtime_value = 120
 time.sleep(4)
-drv.realtime_value = 100
+drv.realtime_value = 120
 time.sleep(4)
 print("I ran with new code")
 
 # Stop real-time playback
-drv.realtime_value = 0
-#drv.mode = adafruit_drv2605.MODE_INTTRIG
+drv.realtime_value = 120
+drv.mode = adafruit_drv2605.MODE_INTTRIG
 
 
 '''effect_num = 118
