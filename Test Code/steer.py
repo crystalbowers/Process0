@@ -1,3 +1,5 @@
+# I troubleshoot real time playback mode in this file
+
 import board
 import busio
 import adafruit_drv2605
