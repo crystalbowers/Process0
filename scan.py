@@ -1,4 +1,4 @@
-# This example shows using TCA9548A to perform a simple scan for connected devices
+# Using TCA9548A (the multiplexer) to perform a scan for connected devices
 import board
 import adafruit_tca9548a
 
