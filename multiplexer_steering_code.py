@@ -20,7 +20,7 @@ class Steering_Wheel_MotorController:
         # Set effect number
         self.effect_num = effect_num
 
-        # Set the sequence
+        # Set the sequence for each motor driver connected to the multiplexer
         #self.drv.sequence[0] = adafruit_drv2605.Effect(self.effect_num)
         self.tsl1.sequence[0] = adafruit_drv2605.Effect(effect_num)
         self.tsl2.sequence[0] = adafruit_drv2605.Effect(effect_num)
