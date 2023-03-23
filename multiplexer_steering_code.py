@@ -40,9 +40,18 @@ class Steering_Wheel_MotorController:
         time.sleep(run_time)
         tsl2.stop()
 
-    def run(self,side="left",run_time=5):
+    def run_both_sides(self, run_time=5):
+        tsl1.play()
+        tsl2.play()
+        time.sleep(run_time)
+        tsl1.stop()
+        tsl2.stop()
+
+    def run(self,side="both",run_time=5):
         # Run for five seconds then stop
-        if side == "left":
+        if side == "both":
+            self.run_both_sides(run_time)
+        elif side == "left":
             self.run_left_side(run_time)
         elif side =="right":
             self.run_right_side(run_time)
