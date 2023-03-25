@@ -14,7 +14,7 @@ steering_wheel_mc.run()
 print("I ran")
 
 # Running LED lights
-'''steering_wheel_lc = LED_Controller()
+steering_wheel_lc = LED_Controller()
 steering_wheel_lc.run(side="right")
 steering_wheel_lc.run(side="left")
-steering_wheel_lc.clean_up()'''
+steering_wheel_lc.clean_up()
