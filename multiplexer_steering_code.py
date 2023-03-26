@@ -5,7 +5,7 @@ import adafruit_drv2605
 import time
 
 class Steering_Wheel_MotorController:
-    def __init__(self, effect_num=118):
+    def __init__(self, effect_num=118,channel_1,channel_2):
         # Initalize I2C bus and DRV2065 module
         self.i2c = busio.I2C(board.SCL, board.SDA)
         #self.drv = adafruit_drv2605.DRV2605(self.i2c)
@@ -14,8 +14,8 @@ class Steering_Wheel_MotorController:
         self.tca = adafruit_tca9548a.TCA9548A(i2c)
 
         # For each motor driver, create it using the TCA9548A channel instead of the I2C object
-        self.tsl1 = adafruit_drv2605.DRV2605(tca[0])
-        self.tsl2 = adafruit_drv2605.DRV2605(tca[1])
+        self.tsl1 = adafruit_drv2605.DRV2605(tca[channel_1])
+        self.tsl2 = adafruit_drv2605.DRV2605(tca[channel_2])
 
         # Set effect number
         self.effect_num = effect_num
