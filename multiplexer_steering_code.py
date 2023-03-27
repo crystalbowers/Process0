@@ -14,8 +14,8 @@ class Steering_Wheel_MotorController:
         self.tca = adafruit_tca9548a.TCA9548A(self.i2c)
 
         # For each motor driver, create it using the TCA9548A channel instead of the I2C object
-        self.tsl1 = adafruit_drv2605.DRV2605(tca[channel_1])
-        self.tsl2 = adafruit_drv2605.DRV2605(tca[channel_2])
+        self.tsl1 = adafruit_drv2605.DRV2605(self.tca[channel_1])
+        self.tsl2 = adafruit_drv2605.DRV2605(self.tca[channel_2])
 
         # Set effect number
         self.effect_num = effect_num
