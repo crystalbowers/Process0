@@ -31,21 +31,21 @@ class Steering_Wheel_MotorController:
         self.run_right_side(run_time=0)
 
     def run_left_side(self, run_time=5):
-        tsl1.play()
+        self.tsl1.play()
         time.sleep(run_time)
-        tsl1.stop()
+        self.tsl1.stop()
 
     def run_right_side(self,run_time=5):
-        tsl2.play()
+        self.tsl2.play()
         time.sleep(run_time)
-        tsl2.stop()
+        self.tsl2.stop()
 
     def run_both_sides(self, run_time=5):
-        tsl1.play()
-        tsl2.play()
+        self.tsl1.play()
+        self.tsl2.play()
         time.sleep(run_time)
-        tsl1.stop()
-        tsl2.stop()
+        self.tsl1.stop()
+        self.tsl2.stop()
 
     def run(self,side="both",run_time=5):
         # Run for five seconds then stop
