@@ -7,6 +7,7 @@ from led_control import LED_Controller
 seat_mc = Seat_MotorController()
 seat_mc.run(side="left", delay_secs=10)
 seat_mc.stop_motors()
+seat_mc.clean_up()
 
 # Running Steering Wheel Motors
 #steering_wheel_mc = Steering_Wheel_MotorController(effect_num=118)
