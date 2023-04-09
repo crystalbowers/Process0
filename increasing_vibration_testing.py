@@ -8,6 +8,8 @@ from seat_motor_control import Seat_MotorController
 seat_mc = Seat_MotorController()
 
 # if current amplitude bigger than old amplitude and old classification = siren and current classification=siren:
+# one method: can update every 3 sec, would have to use threads
+# second method: can do it based on max amplitude divide -> this will determine duty_cycle (easier)
     seat_mc.run(side="both", delay_secs=3, duty_cycle=60)
 
 # if current amplitude bigger than old amplitude and old classification = siren and current classification=siren and the
@@ -21,9 +23,8 @@ seat_mc.stop_motors()
 seat_mc.clean_up()
 
 
-
 # Running Steering Wheel Motors
-
+# pick 3 levels of that calc from method 2 to pick effect numbers
 # if current amplitude bigger than old amplitude and old classification = siren and current classification=siren:
 steering_wheel_mc = Steering_Wheel_MotorController(effect_num=106)
 
