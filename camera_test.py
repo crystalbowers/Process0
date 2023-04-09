@@ -2,7 +2,7 @@ import cv2
 import time
 import os
 import bluetooth
-
+# Need to edit to send to the app
 # Set up Bluetooth connection
 server_sock = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
 server_sock.bind(("", bluetooth.PORT_ANY))
@@ -27,6 +27,7 @@ camera.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
 # Record video
 fourcc = cv2.VideoWriter_fourcc(*'mp4v')
 filename = 'video.mp4'
+# Create a video file and write frames to it
 out = cv2.VideoWriter(filename, fourcc, 30.0, (640, 480))
 start_time = time.time()
 
