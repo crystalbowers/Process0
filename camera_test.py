@@ -51,4 +51,4 @@ os.remove(filename)
 # Close Bluetooth connection
 client_sock.close()
 server_sock.close()
-print("Bluetooth connection closed")
+print("Video sent. Bluetooth connection closed")
