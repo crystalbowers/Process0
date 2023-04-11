@@ -35,11 +35,11 @@ GPIO.setup(motor_pin4, GPIO.OUT)
 
 # Create PWM instance
 pwm1 = GPIO.PWM(pwm_pin1, pwm_freq)
-pwm2 = GPIO.PWM(pwm_pin2, pwm_freq)
+#pwm2 = GPIO.PWM(pwm_pin2, pwm_freq)
 
 # Start PWM with duty cycle of 0
-#pwm1.start(pwm_duty_cycle)
-pwm2.start(pwm_duty_cycle)
+pwm1.start(pwm_duty_cycle)
+#pwm2.start(pwm_duty_cycle)
 
 # Function to set the speed and direction of the motor
 def set_motor_speed(speed, motor_pin_1, motor_pin_2, pwm):
@@ -93,6 +93,6 @@ elif motor_selection == -1:
     print("right")
 
 # Cleanup GPIO pins
-#pwm1.stop()
-pwm2.stop()
+pwm1.stop()
+#pwm2.stop()
 GPIO.cleanup()
