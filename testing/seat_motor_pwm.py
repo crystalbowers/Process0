@@ -35,7 +35,7 @@ GPIO.setup(motor_pin4, GPIO.OUT)
 
 # Create PWM instance
 pwm1 = GPIO.PWM(pwm_pin1, pwm_freq)
-#pwm2 = GPIO.PWM(pwm_pin2, pwm_freq)
+pwm2 = GPIO.PWM(pwm_pin2, pwm_freq)
 
 # Start PWM with duty cycle of 0
 pwm1.start(pwm_duty_cycle)
