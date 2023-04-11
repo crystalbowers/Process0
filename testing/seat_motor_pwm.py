@@ -2,8 +2,8 @@ import Jetson.GPIO as GPIO
 import time
 
 # Set the GPIO pin for PWM output
-pwm_pin1 = 32
-pwm_pin2 = 33
+pwm_pin1 = 18
+pwm_pin2 = 15
 
 # Set the GPIO pins for motor control
 motor_pin1 = 36

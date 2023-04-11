@@ -6,7 +6,7 @@ from seat_motor_control import Seat_MotorController
 from led_control import LED_Controller
 # Running seat cushion
 seat_mc = Seat_MotorController()
-seat_mc.run(side="both", delay_secs=3, duty_cycle=50)
+seat_mc.run(side="both", delay_secs=3)
 seat_mc.stop_motors()
 seat_mc.clean_up()
 
