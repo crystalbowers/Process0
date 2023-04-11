@@ -39,7 +39,7 @@ pwm2 = GPIO.PWM(pwm_pin2, pwm_freq)
 
 # Start PWM with duty cycle of 0
 pwm1.start(pwm_duty_cycle)
-pwm2.start(pwm_duty_cycle)
+#pwm2.start(pwm_duty_cycle)
 
 # Function to set the speed and direction of the motor
 def set_motor_speed(speed, motor_pin_1, motor_pin_2, pwm):
