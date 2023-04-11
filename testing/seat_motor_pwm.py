@@ -59,8 +59,8 @@ def set_motor_speed(speed, motor_pin_1, motor_pin_2, pwm):
 
 # Run both motors
 if motor_selection==0:
-    set_motor_speed(10,motor_pin1,motor_pin2, pwm1)
-    set_motor_speed(10,motor_pin3,motor_pin4, pwm2)
+    set_motor_speed(50,motor_pin1,motor_pin2, pwm1)
+    set_motor_speed(50,motor_pin3,motor_pin4, pwm2)
 
     # Wait for 5 seconds
     time.sleep(5)
@@ -72,7 +72,7 @@ if motor_selection==0:
 
 # Run left motor
 elif motor_selection == 1:
-    set_motor_speed(10,motor_pin1,motor_pin2, pwm1)
+    set_motor_speed(50,motor_pin1,motor_pin2, pwm1)
 
     # Wait for 5 seconds
     time.sleep(5)
@@ -83,7 +83,7 @@ elif motor_selection == 1:
 
 # Run right motor
 elif motor_selection == -1:
-    set_motor_speed(10, motor_pin3, motor_pin4, pwm2)
+    set_motor_speed(50, motor_pin3, motor_pin4, pwm2)
 
     # Wait for 5 seconds
     time.sleep(5)
