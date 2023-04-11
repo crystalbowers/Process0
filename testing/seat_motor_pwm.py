@@ -94,5 +94,5 @@ elif motor_selection == -1:
 
 # Cleanup GPIO pins
 pwm1.stop()
-pwm2.stop()
+#pwm2.stop()
 GPIO.cleanup()
