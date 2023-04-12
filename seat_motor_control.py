@@ -72,8 +72,10 @@ class Seat_MotorController:
     def run(self, side="both", delay_secs=5, duty_cycle=50):
         if side == "left":
             self.run_left_side(duty_cycle)
+            print("Ran left")
         elif side == "right":
             self.run_right_side(duty_cycle)
+            print("Ran right")
         elif side == "both":
             self.run_left_side(duty_cycle)
             self.run_right_side(duty_cycle)
