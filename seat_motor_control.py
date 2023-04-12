@@ -69,11 +69,13 @@ class Seat_MotorController:
     def run_right_side(self, duty_cycle):
         self.set_motor_duty_cycle(duty_cycle, self.motor2_in3, self.motor2_in4)
 
-    def run(self, side="both", delay_secs=5, duty_cycle=50):
+    def run(self, side="left", delay_secs=5, duty_cycle=50):
         if side == "left":
             self.run_left_side(duty_cycle)
+            print("I ran left side")
         elif side == "right":
             self.run_right_side(duty_cycle)
+            print("I ran right side")
         elif side == "both":
             self.run_left_side(duty_cycle)
             self.run_right_side(duty_cycle)
@@ -83,6 +85,7 @@ class Seat_MotorController:
 
         # stop the motors
         self.stop_motors()
+        self.clean_up()
 
     def stop_motors(self):
         # set functions in the class using self (crystal note)
