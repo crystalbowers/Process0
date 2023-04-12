@@ -13,7 +13,7 @@ motor_pin3 = 35
 motor_pin4 = 37
 
 # Set the PWM frequency and duty cycle
-pwm_freq = 50
+pwm_freq = 0
 pwm_duty_cycle = 0
 
 # Set motor side to be activated
@@ -40,6 +40,7 @@ pwm2 = GPIO.PWM(pwm_pin2, pwm_freq)
 # Start PWM with duty cycle of 0
 pwm1.start(pwm_duty_cycle)
 pwm2.start(pwm_duty_cycle)
+print("yup")
 
 # Function to set the speed and direction of the motor
 def set_motor_speed(speed, motor_pin_1, motor_pin_2, pwm):
@@ -49,9 +50,11 @@ def set_motor_speed(speed, motor_pin_1, motor_pin_2, pwm):
     if speed >= 0:
         GPIO.output(motor_pin_1, motor_direction)
         GPIO.output(motor_pin_2, not motor_direction)
+        print("oop")
     else:
         GPIO.output(motor_pin_1, not motor_direction)
         GPIO.output(motor_pin_2, motor_direction)
+        print("daisy")
     # Set the duty cycle of the PWM
     pwm_duty_cycle = abs(speed)
     pwm.ChangeDutyCycle(pwm_duty_cycle)
@@ -63,23 +66,26 @@ if motor_selection==0:
     set_motor_speed(50,motor_pin3,motor_pin4, pwm2)
 
     # Wait for 5 seconds
-    time.sleep(5)
+    time.sleep(3)
 
     # Stop the motor
     set_motor_speed(0,motor_pin1,motor_pin2, pwm1)
     set_motor_speed(0,motor_pin3,motor_pin4, pwm2)
     print("both")
+    pwm1.stop()
+    pwm2.stop()
 
 # Run left motor
 elif motor_selection == 1:
     set_motor_speed(50,motor_pin1,motor_pin2, pwm1)
 
     # Wait for 5 seconds
-    time.sleep(5)
+    time.sleep(3)
 
     # Stop the motor
     set_motor_speed(0,motor_pin1,motor_pin2, pwm1)
     print("left")
+    pwm1.stop()
 
 # Run right motor
 elif motor_selection == -1:
@@ -91,8 +97,7 @@ elif motor_selection == -1:
     # Stop the motor
     set_motor_speed(0, motor_pin3, motor_pin4, pwm2)
     print("right")
+    pwm2.stop()
 
 # Cleanup GPIO pins
-pwm1.stop()
-pwm2.stop()
 GPIO.cleanup()
