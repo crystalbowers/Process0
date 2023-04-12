@@ -42,11 +42,11 @@ class Seat_MotorController:
         self.pwm2.start(self.pwm_duty_cycle)
         print("self dc:",self.pwm_duty_cycle)
 
-    '''def set_duty_cycle(self, duty_cycle):
+    def set_duty_cycle(self, duty_cycle):
         self.pwm_duty_cycle = duty_cycle
         self.pwm1.ChangeDutyCycle(self.pwm_duty_cycle)
         self.pwm2.ChangeDutyCycle(self.pwm_duty_cycle)
-        print("oop")'''
+        print("oop")
 
 
     def set_motor_duty_cycle(self, duty_cycle, motor_pin_a, motor_pin_b):
@@ -64,19 +64,15 @@ class Seat_MotorController:
             GPIO.output(motor_pin_b, GPIO.HIGH)
             print("nope")
         # Set the duty cycle of the PWM
-        #self.set_duty_cycle(abs(duty_cycle))
-        #print("new dc",duty_cycle)
+        self.set_duty_cycle(abs(duty_cycle))
+        print("new dc",duty_cycle)
         print("Spinning")
 
     def run_left_side(self, duty_cycle):
-        self.pwm_duty_cycle = duty_cycle
-        self.pwm1.ChangeDutyCycle(self.pwm_duty_cycle)
         self.set_motor_duty_cycle(duty_cycle, self.motor1_in1, self.motor1_in2)
         print("dance")
 
     def run_right_side(self, duty_cycle):
-        self.pwm_duty_cycle = duty_cycle
-        self.pwm2.ChangeDutyCycle(self.pwm_duty_cycle)
         self.set_motor_duty_cycle(duty_cycle, self.motor2_in3, self.motor2_in4)
         print("sing")
 
@@ -89,9 +85,6 @@ class Seat_MotorController:
             self.run_right_side(duty_cycle)
             print("I ran right side")
         elif side == "both":
-            self.pwm_duty_cycle = duty_cycle
-            self.pwm1.ChangeDutyCycle(self.pwm_duty_cycle)
-            self.pwm2.ChangeDutyCycle(self.pwm_duty_cycle)
             self.run_left_side(duty_cycle)
             self.run_right_side(duty_cycle)
             print("I ran both sides")
