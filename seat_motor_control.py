@@ -3,7 +3,7 @@ import time
 
 class Seat_MotorController:
     def __init__(self, pwm_pin1=18, pwm_pin2=15, motor1_in1=36, motor1_in2=38, motor2_in3=35, motor2_in4=37,
-                 pwm_freq=50, pwm_duty_cycle=10):
+                 pwm_freq=50, pwm_duty_cycle=0):
 
         # Set the GPIO pin for PWM output
         self.pwm_pin1 = pwm_pin1
