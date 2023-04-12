@@ -72,8 +72,6 @@ if motor_selection==0:
     set_motor_speed(0,motor_pin1,motor_pin2, pwm1)
     set_motor_speed(0,motor_pin3,motor_pin4, pwm2)
     print("both")
-    pwm1.stop()
-    pwm2.stop()
 
 # Run left motor
 elif motor_selection == 1:
@@ -85,7 +83,6 @@ elif motor_selection == 1:
     # Stop the motor
     set_motor_speed(0,motor_pin1,motor_pin2, pwm1)
     print("left")
-    pwm1.stop()
 
 # Run right motor
 elif motor_selection == -1:
@@ -97,7 +94,8 @@ elif motor_selection == -1:
     # Stop the motor
     set_motor_speed(0, motor_pin3, motor_pin4, pwm2)
     print("right")
-    pwm2.stop()
 
 # Cleanup GPIO pins
+pwm1.stop()
+pwm2.stop()
 GPIO.cleanup()
