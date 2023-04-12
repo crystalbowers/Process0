@@ -17,7 +17,7 @@ pwm_freq = 50
 pwm_duty_cycle = 0
 
 # Set motor side to be activated
-motor_selection = 1# 1 for (36, 38), -1 for (35, 37), 0 for both
+motor_selection = -1 # 1 for (36, 38), -1 for (35, 37), 0 for both
 
 # Set the direction of the motor
 motor_direction = 1  # 1 for forward, -1 for backward
@@ -40,7 +40,6 @@ pwm2 = GPIO.PWM(pwm_pin2, pwm_freq)
 # Start PWM with duty cycle of 0
 pwm1.start(pwm_duty_cycle)
 pwm2.start(pwm_duty_cycle)
-print("yup")
 
 # Function to set the speed and direction of the motor
 def set_motor_speed(speed, motor_pin_1, motor_pin_2, pwm):
@@ -50,11 +49,9 @@ def set_motor_speed(speed, motor_pin_1, motor_pin_2, pwm):
     if speed >= 0:
         GPIO.output(motor_pin_1, motor_direction)
         GPIO.output(motor_pin_2, not motor_direction)
-        print("oop")
     else:
         GPIO.output(motor_pin_1, not motor_direction)
         GPIO.output(motor_pin_2, motor_direction)
-        print("daisy")
     # Set the duty cycle of the PWM
     pwm_duty_cycle = abs(speed)
     pwm.ChangeDutyCycle(pwm_duty_cycle)
@@ -62,11 +59,11 @@ def set_motor_speed(speed, motor_pin_1, motor_pin_2, pwm):
 
 # Run both motors
 if motor_selection==0:
-    set_motor_speed(50,motor_pin1,motor_pin2, pwm1)
-    set_motor_speed(50,motor_pin3,motor_pin4, pwm2)
+    set_motor_speed(10,motor_pin1,motor_pin2, pwm1)
+    set_motor_speed(10,motor_pin3,motor_pin4, pwm2)
 
     # Wait for 5 seconds
-    time.sleep(3)
+    time.sleep(5)
 
     # Stop the motor
     set_motor_speed(0,motor_pin1,motor_pin2, pwm1)
@@ -75,10 +72,10 @@ if motor_selection==0:
 
 # Run left motor
 elif motor_selection == 1:
-    set_motor_speed(50,motor_pin1,motor_pin2, pwm1)
+    set_motor_speed(10,motor_pin1,motor_pin2, pwm1)
 
     # Wait for 5 seconds
-    time.sleep(3)
+    time.sleep(5)
 
     # Stop the motor
     set_motor_speed(0,motor_pin1,motor_pin2, pwm1)
@@ -86,7 +83,7 @@ elif motor_selection == 1:
 
 # Run right motor
 elif motor_selection == -1:
-    set_motor_speed(50, motor_pin3, motor_pin4, pwm2)
+    set_motor_speed(10, motor_pin3, motor_pin4, pwm2)
 
     # Wait for 5 seconds
     time.sleep(5)
