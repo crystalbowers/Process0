@@ -54,6 +54,8 @@ class Seat_MotorController:
         # motor pin b is 2 or 4
         # Set the direction of the motor
         # forward
+        self.set_duty_cycle(abs(duty_cycle))
+        print("new dc",duty_cycle)
         if duty_cycle >= 0:
             GPIO.output(motor_pin_a, GPIO.HIGH)
             GPIO.output(motor_pin_b, GPIO.LOW)
@@ -64,8 +66,6 @@ class Seat_MotorController:
             GPIO.output(motor_pin_b, GPIO.HIGH)
             print("nope")
         # Set the duty cycle of the PWM
-        self.set_duty_cycle(abs(duty_cycle))
-        print("new dc",duty_cycle)
         print("Spinning")
 
     def run_left_side(self, duty_cycle):
