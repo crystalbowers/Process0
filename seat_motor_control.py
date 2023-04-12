@@ -42,11 +42,11 @@ class Seat_MotorController:
         self.pwm2.start(self.pwm_duty_cycle)
         print("self dc:",self.pwm_duty_cycle)
 
-    def set_duty_cycle(self, duty_cycle):
+    '''def set_duty_cycle(self, duty_cycle):
         self.pwm_duty_cycle = duty_cycle
         self.pwm1.ChangeDutyCycle(self.pwm_duty_cycle)
         self.pwm2.ChangeDutyCycle(self.pwm_duty_cycle)
-        print("oop")
+        print("oop")'''
 
 
     def set_motor_duty_cycle(self, duty_cycle, motor_pin_a, motor_pin_b):
@@ -64,7 +64,10 @@ class Seat_MotorController:
             GPIO.output(motor_pin_b, GPIO.HIGH)
             print("nope")
         # Set the duty cycle of the PWM
-        self.set_duty_cycle(abs(duty_cycle))
+        self.pwm_duty_cycle = abs(duty_cycle)
+        self.pwm1.ChangeDutyCycle(self.pwm_duty_cycle)
+        self.pwm2.ChangeDutyCycle(self.pwm_duty_cycle)
+        #self.set_duty_cycle(abs(duty_cycle))
         print("new dc",duty_cycle)
         print("Spinning")
 
