@@ -69,10 +69,14 @@ class Seat_MotorController:
         print("Spinning")
 
     def run_left_side(self, duty_cycle):
+        self.pwm_duty_cycle = duty_cycle
+        self.pwm1.ChangeDutyCycle(self.pwm_duty_cycle)
         self.set_motor_duty_cycle(duty_cycle, self.motor1_in1, self.motor1_in2)
         print("dance")
 
     def run_right_side(self, duty_cycle):
+        self.pwm_duty_cycle = duty_cycle
+        self.pwm2.ChangeDutyCycle(self.pwm_duty_cycle)
         self.set_motor_duty_cycle(duty_cycle, self.motor2_in3, self.motor2_in4)
         print("sing")
 
@@ -85,6 +89,9 @@ class Seat_MotorController:
             self.run_right_side(duty_cycle)
             print("I ran right side")
         elif side == "both":
+            self.pwm_duty_cycle = duty_cycle
+            self.pwm1.ChangeDutyCycle(self.pwm_duty_cycle)
+            self.pwm2.ChangeDutyCycle(self.pwm_duty_cycle)
             self.run_left_side(duty_cycle)
             self.run_right_side(duty_cycle)
             print("I ran both sides")
