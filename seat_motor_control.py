@@ -44,7 +44,7 @@ class Seat_MotorController:
 
     def set_duty_cycle(self, duty_cycle):
         self.pwm_duty_cycle = duty_cycle
-       # self.pwm1.ChangeDutyCycle(self.pwm_duty_cycle)
+        self.pwm1.ChangeDutyCycle(self.pwm_duty_cycle)
         self.pwm2.ChangeDutyCycle(self.pwm_duty_cycle)
         print("oop")
 
