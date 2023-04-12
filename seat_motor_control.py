@@ -48,7 +48,6 @@ class Seat_MotorController:
         self.pwm2.ChangeDutyCycle(self.pwm_duty_cycle)
         print("oop")
 
-
     def set_motor_duty_cycle(self, duty_cycle, motor_pin_a, motor_pin_b):
         # motor pin a is 1 or 3
         # motor pin b is 2 or 4
