@@ -7,8 +7,8 @@ from seat_motor_control import Seat_MotorController
 # Running seat cushion
 seat_mc = Seat_MotorController()
 seat_mc.run(side="right", delay_secs=3)
-#seat_mc.stop_motors()
-#seat_mc.clean_up()
+seat_mc.stop_motors()
+seat_mc.clean_up()
 
 # Running Steering Wheel Motors
 #steering_wheel_mc = Steering_Wheel_MotorController(effect_num=118)
