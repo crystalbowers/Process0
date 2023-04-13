@@ -1,6 +1,6 @@
 import Jetson.GPIO as GPIO
 import time
-
+# diff is in if else statements it calls pwm
 class Seat_MotorController:
     def __init__(self, pwm_pin1=18, pwm_pin2=15, motor1_in1=36, motor1_in2=38, motor2_in3=35, motor2_in4=37,
                  pwm_freq=50, pwm_duty_cycle=0):
@@ -43,7 +43,7 @@ class Seat_MotorController:
     def set_duty_cycle(self, duty_cycle):
         self.pwm_duty_cycle = duty_cycle
         self.pwm1.ChangeDutyCycle(self.pwm_duty_cycle)
-        #self.pwm2.ChangeDutyCycle(self.pwm_duty_cycle)
+        self.pwm2.ChangeDutyCycle(self.pwm_duty_cycle)
 
 
     def set_motor_duty_cycle(self, duty_cycle, motor_pin_a, motor_pin_b):
