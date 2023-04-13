@@ -25,9 +25,12 @@ class Steering_Wheel_MotorController:
 
     def run(self,run_time=5):
         # Run for five seconds then stop
-        self.drv.play()
+        self.drv1.play()
         time.sleep(run_time)
-        self.drv.stop()
+        self.drv1.stop()
+        self.drv2.play()
+        time.sleep(run_time)
+        self.drv2.stop()
 
 if __name__ == "__main__":
     s = Steering_Wheel_MotorController()
