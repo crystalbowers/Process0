@@ -4,7 +4,7 @@ import Jetson.GPIO as GPIO
 import time
 
 # for 1st Motor on ENA
-ENA = 32
+ENA = 18
 IN1 = 36
 IN2 = 38
 
