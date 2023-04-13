@@ -20,27 +20,27 @@ GPIO.setup(IN2, GPIO.OUT, initial=GPIO.LOW)
 GPIO.output(ENA, GPIO.HIGH)
 GPIO.output(IN1, GPIO.LOW)
 GPIO.output(IN2, GPIO.LOW)
-time.sleep(1)
+time.sleep(3)
 
 # Forward
 GPIO.output(IN1, GPIO.HIGH)
 GPIO.output(IN2, GPIO.LOW)
-time.sleep(1)
+time.sleep(3)
 
 # Stop
 GPIO.output(IN1, GPIO.LOW)
 GPIO.output(IN2, GPIO.LOW)
-time.sleep(1)
+time.sleep(3)
 
 # Backward
 GPIO.output(IN1, GPIO.LOW)
 GPIO.output(IN2, GPIO.HIGH)
-time.sleep(1)
+time.sleep(3)
 
 # Stop
 GPIO.output(ENA, GPIO.LOW)
 GPIO.output(IN1, GPIO.LOW)
 GPIO.output(IN2, GPIO.LOW)
-time.sleep(1)
+time.sleep(3)
 
 GPIO.cleanup()
