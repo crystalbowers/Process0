@@ -1,6 +1,7 @@
 import Jetson.GPIO as GPIO
 import time
 
+GPIO.cleanup()
 # Set the GPIO pin for PWM output
 pwm_pin1 = 18
 pwm_pin2 = 15
@@ -96,3 +97,4 @@ elif motor_selection == -1:
 pwm1.stop()
 pwm2.stop()
 GPIO.cleanup()
+print("claned up")
