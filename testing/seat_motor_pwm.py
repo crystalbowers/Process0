@@ -14,7 +14,7 @@ motor_pin4 = 37
 
 # Set the PWM frequency and duty cycle
 pwm_freq = 50
-pwm_duty_cycle = 10
+pwm_duty_cycle = 50
 
 # Set motor side to be activated
 motor_selection = -1 # 1 for (36, 38), -1 for (35, 37), 0 for both
