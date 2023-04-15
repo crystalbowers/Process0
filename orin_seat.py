@@ -86,7 +86,7 @@ class Seat_MotorController:
 
         # Run right motor
         elif side == "right":
-            self.set_motor_duty(50, self.motor_pin3, self.motor_pin4, self.pwm2)
+            self.set_motor_duty(70, self.motor_pin3, self.motor_pin4, self.pwm2)
 
             # Wait for 5 seconds
             time.sleep(3)
