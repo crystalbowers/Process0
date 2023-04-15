@@ -2,7 +2,7 @@
 # Comment out the one you dont want if running both.
 #from seat_motor_control import Seat_MotorController
 from orin_seat import Seat_MotorController
-from steering_wheel_motor_control import Steering_Wheel_MotorController
+#from steering_wheel_motor_control import Steering_Wheel_MotorController
 #from multiplexer_steering_code import Steering_Wheel_MotorController
 #from led_control import LED_Controller
 # Running seat cushion
