@@ -62,37 +62,37 @@ class Seat_MotorController:
     def run(self, side):
         # Run both motors
         if side=="both":
-            set_motor_duty(50, self.motor_pin1, self.motor_pin2, self.pwm1)
-            set_motor_duty(50, self.motor_pin3, self.motor_pin4, self.pwm2)
+            self.set_motor_duty(50, self.motor_pin1, self.motor_pin2, self.pwm1)
+            self.set_motor_duty(50, self.motor_pin3, self.motor_pin4, self.pwm2)
 
             # Wait for 5 seconds
             time.sleep(3)
 
             # Stop the motor
-            set_motor_duty(0, self.motor_pin1, self.motor_pin2, self.pwm1)
-            set_motor_duty(0, self.motor_pin3, self.motor_pin4, self.pwm2)
+            self.set_motor_duty(0, self.motor_pin1, self.motor_pin2, self.pwm1)
+            self.set_motor_duty(0, self.motor_pin3, self.motor_pin4, self.pwm2)
             print("both")
 
         # Run left motor
         elif side == "left":
-            set_motor_duty(50, self.motor_pin1, self.motor_pin2, self.pwm1)
+            self.set_motor_duty(50, self.motor_pin1, self.motor_pin2, self.pwm1)
 
             # Wait for 5 seconds
             time.sleep(3)
 
             # Stop the motor
-            set_motor_duty(0, self.motor_pin1, self.motor_pin2, self.pwm1)
+            self.set_motor_duty(0, self.motor_pin1, self.motor_pin2, self.pwm1)
             print("left")
 
         # Run right motor
         elif side == "right":
-            set_motor_duty(50, self.motor_pin3, self.motor_pin4, self.pwm2)
+            self.set_motor_duty(50, self.motor_pin3, self.motor_pin4, self.pwm2)
 
             # Wait for 5 seconds
             time.sleep(3)
 
             # Stop the motor
-            set_motor_duty(0, self.motor_pin3, self.motor_pin4, self.pwm2)
+            self.set_motor_duty(0, self.motor_pin3, self.motor_pin4, self.pwm2)
             print("right")
 
         # Cleanup GPIO pins
